@@ -13,7 +13,7 @@ module.exports = {
     player: true,
     inVoiceChannel: false,
     sameVoiceChannel: false,
-   execute: async (message, args, client, prefix) => {
+   execute: async (message, args, client, track, prefix) => {
   
         const player = message.client.manager.get(message.guild.id);
 
@@ -36,13 +36,13 @@ module.exports = {
 
         const end = page * multiple;
         const start = end - multiple;
-
+        const song = player.queue.current;
         const tracks = queue.slice(start, end);
 
-        if (queue.current) embed.addField("Now Playing", `[${queue.current.title}](${queue.current.uri}) \`[${convertTime(queue.current.duration)}]\``);
+        if (queue.current) embed.setThumbnail(song.displayThumbnail("hqdefault"));embed.addField("Now Playing", `[${queue.current.title}](${queue.current.uri}) \`[${convertTime(queue.current.duration)}]\``);
 
         if (!tracks.length) embed.setDescription(`No tracks in ${page > 1 ? `page ${page}` : "the queue"}.`);
-        else embed.setDescription(`${emojiQueue} Queue List\n` + tracks.map((track, i) => `${start + (++i)} - [${track.title}](${track.uri}) \`[${convertTime(track.duration)}]\``).join("\n"));
+        else embed.setThumbnail(song.displayThumbnail("hqdefault"));embed.setDescription(`**Queue List - ${tracks.length}**\n` + tracks.map((track, i) => `${start + (++i)} - [${track.title}](${track.uri}) \`[${convertTime(track.duration)}]\` - [<@${track.requester.id}>]`).join("\n"));
 
         const maxPages = Math.ceil(queue.length / multiple);
 
