@@ -14,7 +14,7 @@ module.exports = {
     player: true,
     inVoiceChannel: false,
     sameVoiceChannel: false,
-	 execute: async (message, args, client, prefix) => {
+	 execute: async (message, args, client, track, prefix) => {
   
         const player = message.client.manager.get(message.guild.id);
 
@@ -37,8 +37,8 @@ module.exports = {
         var slider = '🔘';
 
         let embed = new MessageEmbed()
-            .setDescription(`${emojimusic} **Now Playing**\n[${song.title}](${song.uri}) - \`[${convertTime(song.duration)}]\` [<@${song.requester.id}>]`)
-            .setThumbnail(song.displayThumbnail("3"))
+            .setDescription(`<a:diska:876363187119857687> **Now Playing**\n[${song.title}](${song.uri}) - \`[${convertTime(song.duration)}]\` [<@${song.requester.id}>]`)
+            .setImage(song.displayThumbnail("hqdefault"))
             .setColor(message.client.embedColor)
             .addField("\u200b", progressbar(total, current, size, line, slider))
             .addField("\u200b", `\`${convertTime(current)} / ${convertTime(total)}\``)
