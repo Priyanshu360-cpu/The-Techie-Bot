@@ -21,7 +21,7 @@ module.exports = {
 			new MessageButton()
     .setLabel("GitHub")
     .setStyle("LINK")
-    .setURL("https://github.com/Priyanshu360-cpu/techie-files"),
+    .setURL("https://github.com/Priyanshu360-cpu/"),
     new MessageButton()
     .setLabel("Support")
     .setStyle("LINK")
@@ -30,7 +30,7 @@ module.exports = {
 
           const mainPage = new MessageEmbed()
             .setAuthor('Techie', 'https://cdn.discordapp.com/avatars/741280410180386947/ddf8e5e39f7baee27240e8836fddd1f5.webp?size=2048')
-            .setThumbnail('https://media.discordapp.net/attachments/845318824323448882/876690332333514752/1629089649835.png')
+            .setThumbnail('https://cdn.discordapp.com/avatars/741280410180386947/ddf8e5e39f7baee27240e8836fddd1f5.webp?size=2048')
              .setColor('#303236')
             .addField('invite Techie', `[Here](https://discord.com/api/oauth2/authorize?client_id=${client.user.id}&permissions=36768832&scope=applications.commands%20bot)`, true)
            message.channel.send({embeds: [mainPage], components: [row]})
