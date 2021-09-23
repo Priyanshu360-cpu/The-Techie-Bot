@@ -73,24 +73,42 @@ module.exports = {
             case 'PLAYLIST_LOADED':
                 player.queue.add(res.tracks);
                 if (!player.playing && !player.paused && player.queue.totalSize === res.tracks.length) player.play();
+                if (search.includes('spotify.com/playlist') === true) {
+                    let p = search.split('playlist/')[1];
+let c = p.split('?')[0];
+let d = 'https://embed.spotify.com/oembed/?url=spotify:playlist:'+c
+const axios = require('axios');
+axios.get(d)
+.then((response) => {
+const cu = response.data.thumbnail_url;
+var thing = new MessageEmbed()
+                .setColor(client.embedColor)
+                .setDescription(`<:Spotify:835926937854541845>  **Added Playlist to queue**\n${res.tracks.length} Songs **${res.playlist.name}** - \`[${convertTime(res.playlist.duration)}]\``)
+                .setImage(cu)
+return message.channel.send({embeds: [thing]})})
+                } else {
+
                 var thing = new MessageEmbed()
                     .setColor(client.embedColor)
                     .setTimestamp()
                     .setDescription(`${emojiplaylist} **Added Playlist to queue**\n${res.tracks.length} Songs **${res.playlist.name}** - \`[${convertTime(res.playlist.duration)}]\``)
                 return message.channel.send({embeds: [thing]});
+                }
             case 'SEARCH_RESULT':
                 var track = res.tracks[0];
                 player.queue.add(track);
                 if (!player.playing && !player.paused && !player.queue.size) {
                     return player.play();
                 } else {
+                    
                     var thing = new MessageEmbed()
                         .setColor(client.embedColor)
                         .setTimestamp()
                         .setThumbnail(track.displayThumbnail("hqdefault"))
                         .setDescription(`${emojiaddsong} **Added Song to queue**\n[${track.title}](${track.uri}) - \`[${convertTime(track.duration)}]\`[<@${track.requester.id}>]`)
                     return message.channel.send({embeds: [thing]});
-                }
+                
+            }
         }
     }
 }
