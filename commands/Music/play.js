@@ -63,12 +63,19 @@ module.exports = {
                 if (!player.playing && !player.paused && !player.queue.size) { 
                     return player.play();
                 } else {
-                    var thing = new MessageEmbed()
-                        .setColor(client.embedColor)
+                    let p = search.split('track/')[1];
+let c = p.split('?')[0];
+let d = 'https://embed.spotify.com/oembed/?url=spotify:track:'+c
+const axios = require('axios');
+axios.get(d)
+.then((response) => {
+const cu = response.data.thumbnail_url;
+var thing = new MessageEmbed()
+                .setColor(client.embedColor)
                         .setTimestamp()
-                        
-                        .setDescription(`${emojiaddsong} **Added Song to queue**\n[${track.title}](${track.uri}) - \`[${convertTime(track.duration)}]\``)
-                    return message.channel.send({embeds: [thing]});
+                        .setDescription(`<:Spotify:835926937854541845> **Added Song to queue**\n[${track.title}](${track.uri}) - \`[${convertTime(track.duration)}]\``)
+                .setThumbnail(cu)
+return message.channel.send({embeds: [thing]})})
                 }
             case 'PLAYLIST_LOADED':
                 player.queue.add(res.tracks);
