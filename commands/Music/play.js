@@ -17,6 +17,74 @@ module.exports = {
   
         const { channel } = message.member.voice;
         var player = message.client.manager.get(message.guild.id);
+        const collector = message.channel.createMessageComponentCollector({time: 15000000});
+    collector.on('collect', async i => {
+        if (i.customId === 'Pausea') {
+            player.pause(true);
+            let thing = new MessageEmbed()
+            .setColor(message.client.embedColor)
+            .setTimestamp()
+            .setDescription('**Paused** the song successfully')
+            await i.reply({embeds: [thing]});
+        }
+        if (i.customId === 'Resumea') {
+            player.pause(false);
+            let thing = new MessageEmbed()
+            .setColor(message.client.embedColor)
+            .setTimestamp()
+            .setDescription('**Resumed** the song successfully')
+            await i.reply({embeds: [thing]});
+        }
+        if (i.customId === 'Skipa') {
+            const autoplay = player.get("autoplay");
+            const song = player.queue.current;
+    
+            if (autoplay === false) {
+                player.stop();
+            } else {
+                player.stop();
+                player.queue.clear();
+                player.set("autoplay", false);
+            }
+            let thing = new MessageEmbed()
+			.setDescription(` **Skipped**\n[${song.title}](${song.uri})`)
+			.setColor(message.client.embedColor)
+			.setTimestamp()
+		 await i.reply({embeds: [thing]});
+        }
+        if (i.customId === 'Lyricsa') {
+            const song = player.queue.current;
+            let c = song.title;
+            let d = 'https://api.leref.ga/lyrics?song='+c;
+            const axios = require('axios');
+            let response, data;
+            try {
+                response = await axios.get(d);
+                data = response.data;
+            }  catch (e) {
+                let bhing = new MessageEmbed()
+                .setDescription('Unable to find lyrics')
+                .setColor(message.client.embedColor)
+                .setTimestamp()
+                await i.reply({embeds: [bhing]});
+            }
+    let du = data.lyrics;
+    let thing = new MessageEmbed()
+			.setDescription(du)
+			.setColor(message.client.embedColor)
+			.setTimestamp()
+            await i.reply({embeds: [thing]});
+        }
+        if (i.customId === 'Loopa') {
+            player.setTrackRepeat(!player.trackRepeat);
+            const trackRepeat = player.trackRepeat ? "enabled" : "disabled";
+            let thing = new MessageEmbed()
+                .setColor(message.client.embedColor)
+                .setTimestamp()
+                .setDescription(` Loop track is now **${trackRepeat}**`)
+                await i.reply({embeds: [thing]});
+        }
+    });
 
         if (player && message.member.voice.channel !== message.guild.me.voice.channel) {
             let thing = new MessageEmbed()
