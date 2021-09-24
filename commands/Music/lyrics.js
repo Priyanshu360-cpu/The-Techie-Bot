@@ -16,7 +16,7 @@ module.exports = {
 	 execute: async (message, args, client, prefix) => {
     
 	  try {
-            if (!ksoft) return message.channel.send({embeds: [new MessageEmbed().setDescription('Please ask developer to add ksoft API Key')]})
+            if (!ksoft) return message.channel.send({embeds: [new MessageEmbed().setDescription('Lyrics not found')]})
             const player = message.client.manager.get(message.guild.id);
             if (!args[0] && !player) return message.channel.send({embeds: [new MessageEmbed().setDescription('Specify a title')]})
             let songTitle = args.join(' ') ? args.join(' ') : player.queue.current.title;
