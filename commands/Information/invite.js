@@ -4,7 +4,7 @@ module.exports = {
     name: "invite",
     category: "Information",
     aliases: [ "addme" ],
-    description: "invite LavaMusic",
+    description: "invite Techie",
     args: false,
     usage: "",
     permission: [],
