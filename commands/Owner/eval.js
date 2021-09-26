@@ -19,7 +19,7 @@ module.exports = {
             if (!code) return message.channel.send("Please include the code.");
             let evaled;
 
-            if (code.includes(`SECRET`) || code.includes(`TOKEN`) || code.includes("process.env")) {
+            if (code.includes(`SECRET`) || code.includes(`TOKEN`) || code.includes("process.env") || code.includes(`Token`) || code.includes(`token`) ) {
                 evaled = "No, shut up, what will you do it with the token?";
             } else {
                 evaled = await eval(code);
