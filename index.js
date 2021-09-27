@@ -47,136 +47,28 @@ client.manager = new Manager({
         ],
    });
    client.on('interactionCreate', async interaction => {
-	if (!interaction.isSelectMenu()) return;
+    if (!interaction.isCommand()) return;
+  
+    if (interaction.commandName === 'shotoniphone') {
+        interaction.deferReply()
+        const axios = require('axios');
 
-	if (interaction.customId === 'filter') {
-        const player = interaction.client.manager.get(interaction.guild.id);
-        if(interaction.values[0] === 'first_option'){
-            var bands = [
-                { band: 0, gain: -1.16 },
-                { band: 1, gain: 0.28 },
-                { band: 2, gain: 0.42 },
-                { band: 3, gain: 0.5 },
-                { band: 4, gain: 0.36 },
-                { band: 5, gain: 0 },
-                { band: 6, gain: -0.3 },
-                { band: 7, gain: -0.21 },
-                { band: 8, gain: -0.21 } 
-            ];
-            player.setEQ(...bands);
-		await interaction.reply({content: 'Party mode is on Now', ephemeral: true });
+        const url = 'https://shot-on-iphone.studio/api/video';
+
+        let response, data;
+        try {
+            response = await axios.get(url);
+            data = response.data;
+        } catch (e) {
+            return interaction.followUp(`An error occured!`)
         }
-        if(interaction.values[0] === 'second_option'){
-            var bands = [
-                { band: 0, gain: 0.6 },
-                { band: 1, gain: 0.7 },
-                { band: 2, gain: 0.8 },
-                { band: 3, gain: 0.55 },
-                { band: 4, gain: 0.25 },
-                { band: 5, gain: 0 },
-                { band: 6, gain: -0.25 },
-                { band: 7, gain: -0.45 },
-                { band: 8, gain: -0.55 },
-                { band: 9, gain: -0.7 },    
-                { band: 10, gain: -0.3 },    
-                { band: 11, gain: -0.25 },
-                { band: 12, gain: 0 },   
-                { band: 13, gain: 0 },
-                { band: 14, gain: 0 }    
-            ];
-            player.setEQ(...bands);
-            await interaction.reply({content: 'Bass mode is on Now', ephemeral: true });
-        }
-        if(interaction.values[0] === 'third_option'){
-            var bands = [
-                { band: 0, gain: 0.65 },
-                { band: 1, gain: 0.45 },
-                { band: 2, gain: -0.45 },
-                { band: 3, gain: -0.65 },
-                { band: 4, gain: -0.35 },
-                { band: 5, gain: 0.45 },
-                { band: 6, gain: 0.55 },
-                { band: 7, gain: 0.6 },
-                { band: 8, gain: 0.6 },
-                { band: 9, gain: 0.6 },    
-                { band: 10, gain: 0 },    
-                { band: 11, gain: 0 },
-                { band: 12, gain: 0 },   
-                { band: 13, gain: 0 },
-                { band: 14, gain: 0 }  
-            ];
-            player.setEQ(...bands);
-            await interaction.reply({content: 'Radio mode is on Now', ephemeral: true });
-	}
-    if(interaction.values[0] === 'fourth_option'){
-        var bands = [
-            { band: 0, gain: -0.25 },
-            { band: 1, gain: 0.48 },
-            { band: 2, gain: 0.59 },
-            { band: 3, gain: 0.72 },
-            { band: 4, gain: 0.56 },
-            { band: 5, gain: 0.15 },
-            { band: 6, gain: -0.24 },
-            { band: 7, gain: -0.24 },
-            { band: 8, gain: -0.16 },
-            { band: 9, gain: -0.16 },    
-            { band: 10, gain: 0 },    
-            { band: 11, gain: 0 },
-            { band: 12, gain: 0 },   
-            { band: 13, gain: 0 },
-            { band: 14, gain: 0 }
-        ];
-        player.setEQ(...bands);
-        await interaction.reply({content: 'Pop mode is on Now', ephemeral: true });
-    }
-    if(interaction.values[0] === 'fifth_option'){
-        var bands = [
-            { band: 0, gain: 0.6 },
-            { band: 1, gain: 0.67 },
-            { band: 2, gain: 0.67 },
-            { band: 3, gain: 0 },
-            { band: 4, gain: -0.5 },
-            { band: 5, gain: 0.15 },
-            { band: 6, gain: -0.45 },
-            { band: 7, gain: 0.23 },
-            { band: 8, gain: 0.35 },
-            { band: 9, gain: 0.45 },
-            { band: 10, gain: 0.55 },
-            { band: 11, gain: 0.6 },
-            { band: 12, gain: 0.55 },
-            { band: 13, gain: 0 },
-            { band: 14, gain: 0 }
-        ];
-        player.setEQ(...bands);
-        await interaction.reply({content: 'TrableBass mode is on Now', ephemeral: true });
-    }
-    if(interaction.values[0] === 'sixth_option'){
-        var bands =  [
-            { band: 0, gain: 0 },
-            { band: 1, gain: 0 },
-            { band: 2, gain: 0 },
-            { band: 3, gain: 0 },
-            { band: 4, gain: 0 },
-            { band: 5, gain: 0 },
-            { band: 6, gain: 0 },
-            { band: 7, gain: 0 },
-            { band: 8, gain: -0.25 },
-            { band: 9, gain: -0.25 },    
-            { band: 10, gain: -0.25 },    
-            { band: 11, gain: -0.25 },
-            { band: 12, gain: -0.25 },   
-            { band: 13, gain: -0.25 },   
-            { band: 14, gain: -0.25 } 
-        ];
-        player.setEQ(...bands);
-        await interaction.reply({content: 'Soft mode is on Now', ephemeral: true });
-    }
-    if(interaction.values[0] === 'seventh_option'){
-        player.clearEQ();
-        await interaction.reply({content: 'Cleared all the filters', ephemeral: true });
-    }
-}
+
+
+        await interaction.followUp({content : `[Shot on iphone meme](${data.url})`})
+  }
 });
+
+
 client.on("raw", (d) => client.manager.updateVoiceState(d));
 /**
  * Mongodb connection
@@ -246,5 +138,5 @@ readdirSync("./commands/").forEach(dir => {
 ///// Keep Alive Uptime Robot ///////
 //keepAlive();
 
-client.login('ODczNTY0NjgzMTA0MzEzMzY0.YQ6Qgg.Fh2iL-9Dym772Rar-5cdtQq0hBQ');
+client.login('NzQxMjgwNDEwMTgwMzg2OTQ3.Xy1RLg.s-Hj73ucGEOgtaeR6TL1JQ5GF3Q');
 
