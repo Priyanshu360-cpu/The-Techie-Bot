@@ -95,13 +95,28 @@ var thing = new MessageEmbed()
                 .setImage(cu)
 return message.channel.send({embeds: [thing]})})
                 } else {
-
+               if(search.includes('spotify.com/album') === true) {
+                let p = search.split('album/')[1];
+                let c = p.split('?')[0];
+                let d = 'https://embed.spotify.com/oembed/?url=spotify:album:'+c
+                const axios = require('axios');
+                axios.get(d)
+                .then((response) => {
+                const cu = response.data.thumbnail_url;
+                var thing = new MessageEmbed()
+                                .setColor(client.embedColor)
+                                .setDescription(`<:Spotify:835926937854541845>  **Added Album to queue**\n${res.tracks.length} Songs **${res.playlist.name}** - \`[${convertTime(res.playlist.duration)}]\``)
+                                .setImage(cu)
+                return message.channel.send({embeds: [thing]})})
+               }
+               else{
                 var thing = new MessageEmbed()
                     .setColor(client.embedColor)
                     .setTimestamp()
-                    .setDescription(`${emojiplaylist} **Added Playlist to queue**\n${res.tracks.length} Songs **${res.playlist.name}** - \`[${convertTime(res.playlist.duration)}]\``)
+                    .setDescription(`<:x_resume:876019503325126667>  **Added Playlist to queue**\n${res.tracks.length} Songs **${res.playlist.name}** - \`[${convertTime(res.playlist.duration)}]\``)
                 return message.channel.send({embeds: [thing]});
                 }
+            }
             case 'SEARCH_RESULT':
                 var track = res.tracks[0];
                 player.queue.add(track);
