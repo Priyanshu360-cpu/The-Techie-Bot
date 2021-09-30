@@ -1,9 +1,10 @@
 const { MessageEmbed, MessageSelectMenu } = require("discord.js");
 const { convertTime } = require('../../utils/convert.js');
 const { MessageActionRow, MessageButton} = require('discord.js');
-module.exports = async (client, player, track, payload, message) => {
-    const channel = client.channels.cache.get(player.textChannel);
-    const emojiplay = client.emoji.play;
+module.exports = async (client, player, track, payload, message, songt) => {
+        const channel = client.channels.cache.get(player.textChannel);
+        const emojiplay = client.emoji.play;
+    player.setVolume('100');
     client.on("interactionCreate", async (i) => {
         if (!i.isButton()) return;
             if (i.customId === 'Pausea') {
@@ -334,7 +335,7 @@ module.exports = async (client, player, track, payload, message) => {
     const thing = new MessageEmbed()
         .setTitle('Now Playing')
         .setURL(`${track.uri}`)
-        .setDescription(`<a:diska:876363187119857687> **Started Playing**\n \`\`\`\n${track.title}\`\`\`\n**Duration** - \`[${convertTime(track.duration)}]\`\n**Requested By** - [<@${track.requester.id}>]`)
+        .setDescription(`<a:diska:876363187119857687> **Started Playing**\n \`\`\`\n${track.title}\`\`\`\n**Duration** - \`[${convertTime(track.duration)}]\``)
         .setImage(track.displayThumbnail("hqdefault"))
         .setColor(client.embedColor)
     var apple = await channel.send({embeds: [thing], components: [row, column]}).then(sent => { 
