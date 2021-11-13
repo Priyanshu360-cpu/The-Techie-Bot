@@ -1,0 +1,30 @@
+{
+    "token": "ODczNTY0NjgzMTA0MzEzMzY0.YQ6Qgg.Fh2iL-9Dym772Rar-5cdtQq0hBQ", 
+    "mongourl": "mongodb+srv://Techie:Techie@cluster0.5asxa.mongodb.net/myFirstDatabase", 
+    "ksoftapi": "", 
+    "prefix": "+",
+    "ownerID": "619474506381000706",
+    "SpotifyID": "b3d3d4de3fb54cc792c7a11540e98ba1", 
+    "SpotifySecret": "3318aa6874d740eeb71da77a74d43965", 
+    "embedColor": "#00ffd2",
+    "clientID": "741280410180386947",
+	"clientSecret": "uwFYFyLM46A8iMR8CNAr_l0B_sBgYVFM",
+	"callbackURL": "/redirect",
+	"port": 3000,
+	"mongoURI": "mongodb+srv://Techie:Techie@cluster0.5asxa.mongodb.net/myFirstDatabase",
+	"baseURI": "http://localhost:3000",
+	"secret": "12",
+     "nodes": [
+    
+    {
+      "host": "disbotlistlavalink.ml",
+      "port": 443,
+      "password": "LAVA",
+      "identifier": "lavamusic",
+      "retryAmount": 3,
+      "retryDelay": 3000,
+      "secure": true 
+    
+    }
+  ]
+}
