@@ -119,7 +119,6 @@ module.exports = {
             channel.send({embeds:[main],components:[row,column]});
         channel.send({embeds:[queue]})})
                 }
-
          }
      }
     }
