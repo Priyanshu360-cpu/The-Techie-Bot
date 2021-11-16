@@ -1,1 +1,1 @@
-static/*.html          text diff=html
+*.html linguist-detectable=false
