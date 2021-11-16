@@ -35,7 +35,23 @@ module.exports = {
             })}
             client.selfRoles = b;
         })
-       
+        collector.on('end', async (collected, reason) => {
+            if (reason === 'time') {
+  
+              const content = new MessageButton()
+                .setLabel('Timeout')
+                .setStyle('DANGER')
+                .setCustomId('timeout|91817623842')
+                .setDisabled()
+  
+              const row = new MessageActionRow()
+                .addComponents([content])
+  const timeout = new MessageEmbed()
+  timeout.setTtitle("Time ran out, Try again");
+  timeout.setColor("RED")
+                a.edit({ embeds: [timeout], components: [row] })
+            }
+          })
             
         }
     }
