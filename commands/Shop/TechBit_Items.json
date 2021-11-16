@@ -1,0 +1,54 @@
+{
+    "Candy":{
+        "Price":null,
+        "Description":"Collect this item to Showoff your friends,#Secret Tip - Usefull in Halloween",
+        "Type":"Collectables",
+        "Shareable":true
+    },
+    "Ring":{
+        "Emerald":{
+            "Price":150000,
+            "Description":"Use this Ring to Propose and Impress your mate",
+            "Type":"Collectables",
+            "Shareable":false
+        },
+        "Cheap":{
+            "Price":100,
+            "Description":"Cheap Ring For Cheap Relationships",
+            "Type":"Collectables",
+            "Shareable":false
+        },
+        "Diamond":{
+            "Price":1000000,
+            "Description":"Buys this Ring and get your Partner within seconds",
+            "Type":"Collectables",
+            "Shareable":false
+        }
+    },
+    "Pet":{
+        "Parrot":{
+            "Price":20000,
+            "Description":"Parrots are the cutest friend to mankind",
+            "Type":"Collectables",
+            "Shareable":false
+        },
+        "Dog":{
+            "Price":50000,
+            "Description":"Buy yourself a loyal friend :)",
+            "Type":"Collectables",
+            "Shareable":false
+        },
+        "Dragon":{
+            "Price":10000,
+            "Description":"What is better than a drgaon?",
+            "Type":"Collectables",
+            "Shareable":false
+        },
+        "Fish":{
+            "Price":1000,
+            "Desription":"Add a cute member to your family",
+            "Type":"Collectables",
+            "Shareable":false
+        }
+    }
+}

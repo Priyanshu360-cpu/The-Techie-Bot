@@ -1,8 +1,8 @@
-const { MessageEmbed } = require("discord.js");
+
 const { minTransformDependencies } = require("mathjs");
 const { convertTime } = require('../../utils/convert.js');
 const { progressbar } = require('../../utils/progressbar.js')
-
+const { MessageEmbed, MessageActionRow, MessageSelectMenu, MessageButton } = require('discord.js');
 module.exports = {
 	name: "musicplayer",
     aliases: ["mp"],
@@ -17,7 +17,7 @@ module.exports = {
          if(message.member.permissions.has(Permissions.FLAGS.ADMINISTRATOR) === true){
             console.log("hello")
             await message.guild.channels.create(
-                "Techie_Player",
+                "🔸techie™-player",
                 {
                 type: 'GUILD_TEXT',
                 }).then(channel=>{channel.setRateLimitPerUser(5);
@@ -114,7 +114,7 @@ module.exports = {
 
             ])
     );
-                    message.guid.channels.fetch(client.data1).then(channel=>{channel.send({embeds:[tutorial]});
+                    message.guild.channels.fetch(client.data1).then(channel=>{channel.send({embeds:[tutorial]});
                 channel.send({embeds:[Starter]});
             channel.send({embeds:[main],components:[row,column]});
         channel.send({embeds:[queue]})})
