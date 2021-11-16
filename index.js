@@ -1,2 +1,2 @@
-import("./bot.js");
+import("./bot.js")
 import("./TechieDash.js")
