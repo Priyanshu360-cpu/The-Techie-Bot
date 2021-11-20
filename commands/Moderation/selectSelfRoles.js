@@ -18,26 +18,22 @@ module.exports = {
         let filter = m => message.author.id === m.author.id
         let titleclr = message.channel.createMessageCollector({ filter, time: 30000, max: 1 })
         message.channel.send("Enter the number of Self Roles You want")
-        titleclr.on("collect", async m => {
-            message.channel.send(`Enter the name of  the next role and mention it`)
-            client.data1 = m.content
-            m.delete()
-            titleclr.stop()
+
             let b = []
         for (let I = 0;I<client.data1;I++){
-            filter = p => message.author.id === p.author.id
-            let titleclra = message.channel.createMessageCollector({ filter, time: 30000, max: 1 })
-            titleclra.on("collect", async p => {
+            let filter = (m) => m.author.id === message.author.id
+            let titleclra = message.channel.createMessageCollector({ filter, time: 30000})
+            titleclra.on("collect", async (message) => {
                 message.channel.send(`Enter the name of next role and mention it`)
-                b.push[p.content]
-                console.log(b)
-                titleclra.stop()
+                b.push[message.content]
+                titleclra.stop() 
             })}
+            
             client.selfRoles = b;
-        })
-        collector.on('end', async (collected, reason) => {
+        titleclra.on('end', async (collected, reason) => {
+            console.log(b)
             if (reason === 'time') {
-  
+                
               const content = new MessageButton()
                 .setLabel('Timeout')
                 .setStyle('DANGER')
