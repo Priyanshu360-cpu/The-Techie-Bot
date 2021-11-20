@@ -1,7 +1,7 @@
 {
-  "name": "lavamusic",
-  "version": "1.0.1",
-  "description": "lavalink music bot base in erelajs",
+  "name": "techie",
+  "version": "1.0.0",
+  "description": "Your Favourite Bot",
   "main": "index.js",
   "scripts": {
     "start": "node index.js"
@@ -33,6 +33,7 @@
     "canvas-senpai": "^2.0.3",
     "chalk": "^4.1.2",
     "common-tags": "^1.8.0",
+    "cordy": "^1.0.2",
     "cors": "^2.8.5",
     "delay": "^5.0.0",
     "discord-api-types": "^0.24.0",
@@ -57,6 +58,8 @@
     "path": "^0.12.7",
     "quickmongo": "^3.0.2",
     "reddit.images": "^1.0.3",
-    "systeminformation": "^5.8.0"
+    "simply-djs": "^2.2.0",
+    "systeminformation": "^5.8.0",
+    "weky": "^3.1.8"
   }
 }

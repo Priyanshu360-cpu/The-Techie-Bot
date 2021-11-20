@@ -42,6 +42,7 @@ client.prefix = client.config.prefix;
 client.embedColor = client.config.embedColor;
 client.aliases = new Collection();
 client.mcache = new Collection();
+client.avatar = new Collection();
 client.selfRole = new Collection();
 client.commands = new Collection();
 client.snipes = new Collection();
