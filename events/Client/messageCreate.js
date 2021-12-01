@@ -1,7 +1,8 @@
 const { MessageEmbed } = require("discord.js");
 
 module.exports = async (client, message) => {
-   
+    var data = await client.db.get(`mchannel_${message.guild.id}`);
+   if(message.channel.id === data)setTimeout(()=>message.delete(),3000)
    if (message.author.bot) return;
    if (!message.guild) return;
 

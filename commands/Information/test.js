@@ -14,7 +14,7 @@ module.exports = {
     permission: [],
     owner: false,
     execute: async (message, args, client, prefix) => {
-        const apple = require("cordy")
-        apple.afk(message,args,client)
+  const apple = require("cordy")
+        apple.spotify(message,args,client)
     }
 }

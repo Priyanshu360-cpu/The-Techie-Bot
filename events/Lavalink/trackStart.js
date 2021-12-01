@@ -1,11 +1,70 @@
 const { MessageEmbed, MessageSelectMenu } = require("discord.js");
 const { convertTime } = require('../../utils/convert.js');
+const { progressbar } = require('../../utils/progressbar.js')
 const { MessageActionRow, MessageButton} = require('discord.js');
-module.exports = async (client, player, track, payload, message, songt) => {
+module.exports = async (client, player, track, payload, message, songt) => { 
+    var data = await client.db.get(`mchannel_${player.guild}`);
+    var data2 = await client.db.get(`mmesage_${player.guild}`);
+    var data3 = await client.db.get(`mqmessage_${player.guild}`);
+    if(data){
+        try{
+        client.channels.fetch(data).then(y=>{y.messages.fetch(data2).then(
+            x=>{
+                
+                const song = player.queue.current
+                var total = song.duration;
+                var current = player.position;
+                var size = 20;
+                var line = '▬';
+                var slider = '🔘';
+        
+                let embed = new MessageEmbed()
+                    .setDescription(`<a:diska:876363187119857687> **Now Playing**\n**[${song.title}](${song.uri})** - \`[${convertTime(song.duration)}]\``)
+                    .setImage(song.displayThumbnail("hqdefault"))
+                    .setColor("FFCBCB")
+                    .addField("\u200b", progressbar(total, current, size, line, slider))
+                    .addField("\u200b", `\`${convertTime(current)} / ${convertTime(total)}\``);
+                    
+                x.edit({embeds: [embed]});
+            }
+        )
+        }
+        )
+        client.channels.fetch(data).then(y=>{y.messages.fetch(data3).then(
+            x=>{
+                const queue = player.queue;
+                const multiple = 10;
+                const page = 1 && Number(1) ? Number(1) : 1;
+        
+                const end = page * multiple;
+                const start = end - multiple;
+                const song = player.queue.current;
+                const tracks = queue.slice(start, end);
+                let embed = new MessageEmbed()
+                if (queue.current) embed.setThumbnail(song.displayThumbnail("hqdefault"));embed.addField("Now Playing", `[${queue.current.title}](${queue.current.uri}) \`[${convertTime(queue.current.duration)}]\``);
+        
+                if (!tracks.length) embed.setDescription(`No tracks in ${page > 1 ? `page ${page}` : "the queue"}.`);
+                else embed.setThumbnail(song.displayThumbnail("hqdefault"));embed.setDescription(`**Queue List - ${queue.length}**\n` + tracks.map((track, i) => `${start + (++i)} - ${track.title} \`[${convertTime(track.duration)}]\``).join("\n"));
+        
+                const maxPages = Math.ceil(queue.length / multiple);
+        
+                embed.addField("\u200b", `Page ${page > maxPages ? maxPages : page} of ${maxPages}`);
+                embed.setColor("FFCBCB");
+                x.edit({embeds: [embed]});
+            })})
+    }
+    catch(e){
+        console.log(e)
+    }
+}
+    else{
         const channel = client.channels.cache.get(player.textChannel);
         const emojiplay = client.emoji.play;
-    player.setVolume('100');
-    client.on("interactionCreate", async (i) => {
+    player.setVolume('100'); 
+    
+    const collector = channel.createMessageComponentCollector({time: 300000});
+collector.on('collect', async i => 
+{
         if (!i.isButton()) return;
             if (i.customId === 'Pausea') {
                 if (player && i.member.voice.channel !== i.guild.me.voice.channel) {
@@ -100,8 +159,10 @@ module.exports = async (client, player, track, payload, message, songt) => {
                     await i.reply({embeds: [thing]});
                         }
             }
-        });
-        client.on('interactionCreate', async interaction => {
+        }); 
+        const tollector = channel.createMessageComponentCollector({time: 300000});
+tollector.on('collect', async interaction => 
+{
             if (!interaction.isSelectMenu()) return;
         
             if (interaction.customId === 'filter') {
@@ -353,4 +414,5 @@ module.exports = async (client, player, track, payload, message, songt) => {
     }
 }
       
+}
 }

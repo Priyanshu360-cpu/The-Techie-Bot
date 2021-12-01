@@ -1,8 +1,9 @@
 module.exports = async (client, player, track, playload) => {
     const channel = client.channels.cache.get(player.textChannel);
     const autoplay = player.get("autoplay")
-    const testo = await client.mcache.get(channel.guild.id);
-    channel.messages.delete(testo) 
+    var data = await client.db.get(`mchannel_${player.guild}`);
+    if(!data){const testo = await client.mcache.get(channel.guild.id);
+    channel.messages.delete(testo)} 
     if (autoplay === true) {
         const requester = player.get("requester");
         const oldidentifier = player.get("identifier");

@@ -12,16 +12,15 @@ module.exports = {
     usage: "",
     permission: [],
 	 execute: async (message, args, client, track, prefix) => {
-        console.log("hi")
         const { Permissions } = require('discord.js');
          if(message.member.permissions.has(Permissions.FLAGS.ADMINISTRATOR) === true){
-            console.log("hello")
+            
             await message.guild.channels.create(
                 "🔸techie™-player",
                 {
                 type: 'GUILD_TEXT',
                 }).then(channel=>{channel.setRateLimitPerUser(5);
-                client.data1=channel.id})
+                client.mchannel.set(`mchannel_${message.guild.id}`,channel.id)})
                 setTimeout(()=>setplayer(),5000)
                 function setplayer(){
                     let tutorial = new MessageEmbed()
@@ -45,27 +44,27 @@ module.exports = {
                     const row = new MessageActionRow()
     .addComponents(
         new MessageButton()
-            .setCustomId('Pausea')
+            .setCustomId('Pauseaa')
             .setLabel('Pause')
             .setStyle('SECONDARY')
             .setEmoji('876007266418057217'),
             new MessageButton()
-            .setCustomId('Resumea')
+            .setCustomId('Resumeaa')
             .setLabel('Resume')
             .setStyle('DANGER')
             .setEmoji('876019503325126667'),
             new MessageButton()
-            .setCustomId('Skipa')
+            .setCustomId('Skipaa')
             .setLabel('Skip')
             .setStyle('PRIMARY')
             .setEmoji('876007419724054548'),
             new MessageButton()
-            .setCustomId('Lyricsa')
+            .setCustomId('Lyricsaa')
             .setLabel('Lyrics')
             .setStyle('SUCCESS')
             .setEmoji('876007882578100264'),
             new MessageButton()
-            .setCustomId('Loopa')
+            .setCustomId('Loopaa')
             .setLabel('Loop')
             .setStyle('SECONDARY')
             .setEmoji('881060715941740555'),
@@ -73,7 +72,7 @@ module.exports = {
     const column = new MessageActionRow()
     .addComponents(
             new MessageSelectMenu()
-            .setCustomId('filter')
+            .setCustomId('filtera')
             .setPlaceholder('Apply Filters')
             .addOptions([
                 {
@@ -114,10 +113,12 @@ module.exports = {
 
             ])
     );
-                    message.guild.channels.fetch(client.data1).then(channel=>{channel.send({embeds:[tutorial]});
-                channel.send({embeds:[Starter]});
-            channel.send({embeds:[main],components:[row,column]});
-        channel.send({embeds:[queue]})})
+                    message.guild.channels.fetch(client.mchannel.get(`mchannel_${message.guild.id}`)).then(channel=>{channel.send({embeds:[tutorial]});
+                channel.send({embeds:[Starter]});     
+               channel.send({embeds:[main],components:[row,column]}).then(me=>client.db.set(`mmesage_${message.guild.id}`,me.id));
+            client.db.set(`mchannel_${message.guild.id}`,client.mchannel.get(`mchannel_${message.guild.id}`))
+ 
+        channel.send({embeds:[queue]}).then(c=>client.db.set(`mqmessage_${message.guild.id}`,c.id))})
                 }
          }
      }

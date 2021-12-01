@@ -43,7 +43,7 @@ module.exports = {
 
         const search = args.join(' ');
         let res;
-
+message.react("<:Techie:892664283090001931>");
         try {
             res = await player.search(search, message.author);
             if (res.loadType === 'LOAD_FAILED') {
@@ -53,7 +53,7 @@ module.exports = {
         } catch (err) {
             return message.reply(`there was an error while searching: ${err.message}`);
         }
-
+ 
         switch (res.loadType) {
             case 'NO_MATCHES':
                 if (!player.queue.current) player.destroy();
