@@ -40,7 +40,7 @@ module.exports = {
                    break;
                }
            } 
-           client.selfRole.set(`${message.guild.id}_${d}`,{d:{"Roles":b,"Id":b}})
+           client.selfRole.set(`${message.guild.id}_${d}`,{"Roles":b,"Id":b})
             titleclra.on('end', async (collected, reason) => {
                 if (reason === 'time') {
                   const content = new MessageButton()
