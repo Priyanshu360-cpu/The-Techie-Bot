@@ -10,6 +10,7 @@ module.exports = {
     category: "Information",
     description: "Stylish avatar",
     args: false,
+    aliases: [ "av","pfp"],
     usage: "",
     permission: [],
     owner: false,
