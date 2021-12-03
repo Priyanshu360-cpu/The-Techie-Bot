@@ -30,7 +30,8 @@ module.exports = {
             let titleclra = message.channel.createMessageCollector({ filter, time: 30000, max: c})
             titleclra.on("collect", async (message) => {
                 if(i!=2){
-                message.channel.send(`Enter the name of next role and mention it`)}
+                message.channel.send(`Enter the name of next role and mention it`)} 
+                
                 b[i] = message.content;
                 i=i+1;
             }) 
