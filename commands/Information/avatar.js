@@ -181,7 +181,15 @@ i.deferUpdate()
     collector.on("end", () => {
         column.components[0].setDisabled(true)
         row.components[0].setDisabled(true)
-        o.edit({components:[column,row]})
+        o.edit({components:[column,row]}) 
+        var deletteBtn = new MessageButton()
+        deletteBtn.setCustomId(`delta`)
+
+        deletteBtn.setEmoji("🗑️")
+        deletteBtn.setStyle("DANGER"); 
+    var pageaMovingButttons = new MessageActionRow().addComponents([deletteBtn
+      ]);
+      setTimeout(()=> o.edit({components:[pageaMovingButttons]}), 3000)
     })
 }
 })

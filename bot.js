@@ -250,6 +250,11 @@ client.on("interactionCreate", async (i) => {
                     }
         }
     });
+    client.on('interactionCreate', async interaction => { 
+        if(interaction.customId === "delta"){
+            interaction.message.delete();
+        }
+    })
     client.on('interactionCreate', async interaction => {
         if (!interaction.isSelectMenu()) return;
     
