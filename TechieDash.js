@@ -34,19 +34,11 @@ app.get(
 		successRedirect: '/main',
 	}),
 );
-app.get('/', functions.isAuthorized, async (req, res) => {
+app.get('/', async (req, res) => {
 	if (!req.user) {
-		var data = await model.findOne({ _id: req.user.id });
 		res.render('index', {
 			baseURI: config.baseURI,
-			date: new Date(data.created).toString(),
-		    id: data._id,
-		    token: data.token,
-		    banned: data.banned,
-		    baseURI: config.baseURI,
-		    username: data.username,
 		});
-		
 	} else {
 		res.redirect('/dashboard');
 	}
