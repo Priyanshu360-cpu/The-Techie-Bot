@@ -553,7 +553,7 @@ readdirSync("./events/Lavalink/").forEach(function (file) {
     client.manager.on(eventName, event.bind(null, client));
 });
 readdirSync("./commands/").forEach(function (dir) {
-    var commandFiles = readdirSync("./commands/".concat(dir, "/")).filter(function (f) { return f.endsWith('.js'); });
+    var commandFiles = readdirSync("./commands/".concat(dir, "/"));
     for (var _i = 0, commandFiles_1 = commandFiles; _i < commandFiles_1.length; _i++) {
         var file = commandFiles_1[_i];
         var command = require("./commands/".concat(dir, "/").concat(file));
@@ -562,7 +562,7 @@ readdirSync("./commands/").forEach(function (dir) {
     }
 });
 readdirSync("./interactions/").forEach(function (dir) {
-    var commandFiles = readdirSync("./interactions/".concat(dir, "/")).filter(function (f) { return f.endsWith('.js'); });
+    var commandFiles = readdirSync("./interactions/".concat(dir, "/"));
     for (var _i = 0, commandFiles_2 = commandFiles; _i < commandFiles_2.length; _i++) {
         var file = commandFiles_2[_i];
         var command = require("./interactions/".concat(dir, "/").concat(file));

@@ -1,6 +1,4 @@
 
-import { MessageEmbed,Message,Client } from "discord.js"
-import { MessageActionRow,  MessageAttachment, MessageButton,  MessageSelectMenu } from 'discord.js';
 module.exports = {
     name: "shop",
     category: "Information",
@@ -11,6 +9,7 @@ module.exports = {
     permission: [],
     owner: false,
    execute: async (message, args, client, prefix) => { 
+    const { MessageEmbed, MessageActionRow,  MessageAttachment, MessageButton,  MessageSelectMenu } = require("discord.js");
        message.channel.send("Hello")
    }
 }

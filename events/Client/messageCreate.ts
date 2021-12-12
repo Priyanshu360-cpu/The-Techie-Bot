@@ -1,6 +1,7 @@
 
 
 module.exports = async (client, message) => {
+    const { MessageEmbed, MessageSelectMenu } = require("discord.js");
     var data = await client.db.get(`mchannel_${message.guild.id}`);
    if(message.channel.id === data)setTimeout(()=>message.delete(),3000)
    if (message.author.bot) return;
@@ -35,12 +36,9 @@ module.exports = async (client, message) => {
     
     const embed = new MessageEmbed()
         .setColor("RED");
-
-    // args: true,
     if (command.args && !args.length) {
         let reply = `You didn't provide any arguments, ${message.author}!`;
         
-        // usage: '',
         if (command.usage) {
         	reply += `\nUsage: \`${prefix}${command.name} ${command.usage}\``;
         }

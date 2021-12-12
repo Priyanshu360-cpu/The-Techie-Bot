@@ -428,7 +428,7 @@ readdirSync("./events/Lavalink/").forEach(file => {
   client.manager.on(eventName, event.bind(null, client));
 });
 readdirSync("./commands/").forEach(dir => {
-    const commandFiles = readdirSync(`./commands/${dir}/`).filter(f => f.endsWith('.js'));
+    const commandFiles = readdirSync(`./commands/${dir}/`);
     for (const file of commandFiles) {
         const command = require(`./commands/${dir}/${file}`);
         client.logger.log(`Loading ${command.category} commands ${command.name}`, "cmd");
@@ -436,7 +436,7 @@ readdirSync("./commands/").forEach(dir => {
     }
 });
 readdirSync("./interactions/").forEach(dir => {
-  const commandFiles = readdirSync(`./interactions/${dir}/`).filter(f => f.endsWith('.js'));
+  const commandFiles = readdirSync(`./interactions/${dir}/`);
   for (const file of commandFiles) {
       const command = require(`./interactions/${dir}/${file}`);
       client.logger.log(`Loading ${command.category} commands ${command.name}`, "cmd");
