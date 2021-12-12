@@ -1,2 +1,4 @@
-import("./bot.js")
-import("./TechieDash.js")
+"use strict";
+exports.__esModule = true;
+require("./bot.js");
+require("./TechieDash.js");
