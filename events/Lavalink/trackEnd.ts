@@ -9,7 +9,7 @@ module.exports = async (client, player, track, playload) => {
         const oldidentifier = player.get("identifier");
         const identifier = player.queue.current.identifier;
         const search = `https://www.youtube.com/watch?v=${identifier}&list=RD${identifier}`;
-        res = await player.search(search, requester);
+        let res = await player.search(search, requester);
 		player.queue.add(res.tracks[2]);
     }
 }

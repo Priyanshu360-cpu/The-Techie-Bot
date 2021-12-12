@@ -1,4 +1,5 @@
-const { Client, Collection, Intents,MessageEmbed } = require("discord.js");
+const {Client} = require("discord.js"); 
+import {Collection, Intents,MessageEmbed } from "discord.js";
 const array = [];
 const { readdirSync } = require("fs");
 const mongoose = require('mongoose');

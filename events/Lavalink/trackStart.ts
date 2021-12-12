@@ -151,7 +151,7 @@ module.exports = async (client, player, track, payload, message, songt) => {
     var apple = await channel.send({embeds: [thing], components: [row, column]}).then(sent => { 
         let id = sent.id;
         client.mcache.set(channel.guild.id, id);
-        setTimeout(() => channel.messages.delete(id), `${track.duration}`);
+        setTimeout(() => channel.messages.delete(id), track.duration);
       }); 
     }
 }
