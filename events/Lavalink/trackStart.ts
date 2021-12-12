@@ -21,7 +21,7 @@ module.exports = async (client, player, track, payload, message, songt) => {
                 let embed = new MessageEmbed()
                     .setDescription(`<a:diska:876363187119857687> **Now Playing**\n**[${song.title}](${song.uri})** - \`[${convertTime(song.duration)}]\``)
                     .setImage(song.displayThumbnail("hqdefault"))
-                    .setColor("FFCBCB")
+                    .setColor("#FFCBCB")
                     .addField("\u200b", progressbar(total, current, size, line, slider))
                     .addField("\u200b", `\`${convertTime(current)} / ${convertTime(total)}\``);
                     
@@ -49,7 +49,7 @@ module.exports = async (client, player, track, payload, message, songt) => {
                 const maxPages = Math.ceil(queue.length / multiple);
         
                 embed.addField("\u200b", `Page ${page > maxPages ? maxPages : page} of ${maxPages}`);
-                embed.setColor("FFCBCB");
+                embed.setColor("#FFCBCB");
                 x.edit({embeds: [embed]});
             })})
     }

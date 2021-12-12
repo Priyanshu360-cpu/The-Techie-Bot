@@ -1,4 +1,4 @@
-const { MessageEmbed } = require("discord.js");
+
 const snipes = {};
 const pipes = {};
 module.exports = async (client, message) => {
