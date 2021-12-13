@@ -1,0 +1,169 @@
+2021-12-13 19:23:25.667  INFO 13908 --- [main] lavalink.server.Launcher                 : 
+
+[32m       .  [31m _                  _ _       _    [32m__ _ _
+[32m      /\\ [31m| | __ ___   ____ _| (_)_ __ | | __[32m\ \ \ \
+[32m     ( ( )[31m| |/ _` \ \ / / _` | | | '_ \| |/ /[32m \ \ \ \
+[32m      \\/ [31m| | (_| |\ V / (_| | | | | | |   < [32m  ) ) ) )
+[32m       '  [31m|_|\__,_| \_/ \__,_|_|_|_| |_|_|\_\[32m / / / /
+[0m    =========================================[32m/_/_/_/[0m
+
+	Version:        3.4
+	Build:          1257
+	Build time:     26.10.2021 14:18:37 UTC
+	Branch          master
+	Commit:         a364833
+	Commit time:    26.10.2021 14:15:20 UTC
+	JVM:            11.0.12
+	Lavaplayer      1.3.96-original
+
+2021-12-13 19:23:25.738  INFO 13908 --- [main] o.s.boot.SpringApplication               : 
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::        (v2.1.8.RELEASE)
+
+
+2021-12-13 19:23:25.868  INFO 13908 --- [main] lavalink.server.Launcher                 : Starting Launcher on BT-21051495 with PID 13908 (C:\Users\KIIT\Desktop\Techie_Final\Lavalink.jar started by KIIT in C:\Users\KIIT\Desktop\Techie_Final)
+2021-12-13 19:23:25.870  INFO 13908 --- [main] lavalink.server.Launcher                 : No active profile set, falling back to default profiles: default
+2021-12-13 19:23:25.987  WARN 13908 --- [background-preinit] o.s.h.c.j.Jackson2ObjectMapperBuilder    : For Jackson Kotlin classes support please add "com.fasterxml.jackson.module:jackson-module-kotlin" to the classpath
+2021-12-13 19:23:27.778  WARN 13908 --- [main] io.undertow.websockets.jsr               : UT026010: Buffer pool was not set on WebSocketDeploymentInfo, the default pool will be used
+2021-12-13 19:23:27.800  INFO 13908 --- [main] io.undertow.servlet                      : Initializing Spring embedded WebApplicationContext
+2021-12-13 19:23:27.801  INFO 13908 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1856 ms
+2021-12-13 19:23:28.174  WARN 13908 --- [main] l.server.config.SentryConfiguration      : Turning off sentry
+2021-12-13 19:23:28.493  INFO 13908 --- [main] c.s.d.l.tools.GarbageCollectionMonitor   : GC monitoring enabled, reporting results every 2 minutes.
+2021-12-13 19:23:28.738  INFO 13908 --- [main] lavalink.server.config.KoeConfiguration  : OS: Windows 10, Arch: amd64
+2021-12-13 19:23:28.739  WARN 13908 --- [main] lavalink.server.config.KoeConfiguration  : This system and architecture appears to not support native audio sending! GC pauses may cause your bot to stutter during playback.
+2021-12-13 19:23:29.026  INFO 13908 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-12-13 19:23:29.460  INFO 13908 --- [main] org.xnio                                 : XNIO version 3.3.8.Final
+2021-12-13 19:23:29.481  INFO 13908 --- [main] org.xnio.nio                             : XNIO NIO Implementation Version 3.3.8.Final
+2021-12-13 19:23:29.580  INFO 13908 --- [main] o.s.b.w.e.u.UndertowServletWebServer     : Undertow started on port(s) 2333 (http) with context path ''
+2021-12-13 19:23:29.591  INFO 13908 --- [main] lavalink.server.Launcher                 : Started Launcher in 4.501 seconds (JVM running for 5.083)
+2021-12-13 19:23:29.594  INFO 13908 --- [main] lavalink.server.Launcher                 : You can safely ignore the big red warning about illegal reflection. See https://github.com/freyacodes/Lavalink/issues/295
+2021-12-13 19:37:36.347  INFO 3192 --- [main] lavalink.server.Launcher                 : 
+
+[32m       .  [31m _                  _ _       _    [32m__ _ _
+[32m      /\\ [31m| | __ ___   ____ _| (_)_ __ | | __[32m\ \ \ \
+[32m     ( ( )[31m| |/ _` \ \ / / _` | | | '_ \| |/ /[32m \ \ \ \
+[32m      \\/ [31m| | (_| |\ V / (_| | | | | | |   < [32m  ) ) ) )
+[32m       '  [31m|_|\__,_| \_/ \__,_|_|_|_| |_|_|\_\[32m / / / /
+[0m    =========================================[32m/_/_/_/[0m
+
+	Version:        3.4
+	Build:          1257
+	Build time:     26.10.2021 14:18:37 UTC
+	Branch          master
+	Commit:         a364833
+	Commit time:    26.10.2021 14:15:20 UTC
+	JVM:            11.0.12
+	Lavaplayer      1.3.96-original
+
+2021-12-13 19:37:36.478  INFO 3192 --- [main] lavalink.server.Launcher                 : Starting Launcher on BT-21051495 with PID 3192 (C:\Users\KIIT\Desktop\Techie_Final\Lavalink.jar started by KIIT in C:\Users\KIIT\Desktop\Techie_Final)
+2021-12-13 19:37:36.480  INFO 3192 --- [main] lavalink.server.Launcher                 : No active profile set, falling back to default profiles: default
+2021-12-13 19:37:36.589  WARN 3192 --- [background-preinit] o.s.h.c.j.Jackson2ObjectMapperBuilder    : For Jackson Kotlin classes support please add "com.fasterxml.jackson.module:jackson-module-kotlin" to the classpath
+2021-12-13 19:37:38.001  WARN 3192 --- [main] io.undertow.websockets.jsr               : UT026010: Buffer pool was not set on WebSocketDeploymentInfo, the default pool will be used
+2021-12-13 19:37:38.026  INFO 3192 --- [main] io.undertow.servlet                      : Initializing Spring embedded WebApplicationContext
+2021-12-13 19:37:38.027  INFO 3192 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1488 ms
+2021-12-13 19:37:38.437  WARN 3192 --- [main] l.server.config.SentryConfiguration      : Turning off sentry
+2021-12-13 19:37:38.762  INFO 3192 --- [main] c.s.d.l.tools.GarbageCollectionMonitor   : GC monitoring enabled, reporting results every 2 minutes.
+2021-12-13 19:37:38.969  INFO 3192 --- [main] lavalink.server.config.KoeConfiguration  : OS: Windows 10, Arch: amd64
+2021-12-13 19:37:38.969  WARN 3192 --- [main] lavalink.server.config.KoeConfiguration  : This system and architecture appears to not support native audio sending! GC pauses may cause your bot to stutter during playback.
+2021-12-13 19:37:39.253  INFO 3192 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-12-13 19:37:39.715  INFO 3192 --- [main] org.xnio                                 : XNIO version 3.3.8.Final
+2021-12-13 19:37:39.732  INFO 3192 --- [main] org.xnio.nio                             : XNIO NIO Implementation Version 3.3.8.Final
+2021-12-13 19:37:39.812  INFO 3192 --- [main] o.s.b.w.e.u.UndertowServletWebServer     : Undertow started on port(s) 2333 (http) with context path ''
+2021-12-13 19:37:39.820  INFO 3192 --- [main] lavalink.server.Launcher                 : Started Launcher in 4.056 seconds (JVM running for 4.621)
+2021-12-13 19:37:39.826  INFO 3192 --- [main] lavalink.server.Launcher                 : You can safely ignore the big red warning about illegal reflection. See https://github.com/freyacodes/Lavalink/issues/295
+2021-12-13 19:58:22.877  INFO 16508 --- [main] lavalink.server.Launcher                 : 
+
+[32m       .  [31m _                  _ _       _    [32m__ _ _
+[32m      /\\ [31m| | __ ___   ____ _| (_)_ __ | | __[32m\ \ \ \
+[32m     ( ( )[31m| |/ _` \ \ / / _` | | | '_ \| |/ /[32m \ \ \ \
+[32m      \\/ [31m| | (_| |\ V / (_| | | | | | |   < [32m  ) ) ) )
+[32m       '  [31m|_|\__,_| \_/ \__,_|_|_|_| |_|_|\_\[32m / / / /
+[0m    =========================================[32m/_/_/_/[0m
+
+	Version:        3.4
+	Build:          1257
+	Build time:     26.10.2021 14:18:37 UTC
+	Branch          master
+	Commit:         a364833
+	Commit time:    26.10.2021 14:15:20 UTC
+	JVM:            11.0.12
+	Lavaplayer      1.3.96-original
+
+2021-12-13 19:58:23.009  INFO 16508 --- [main] lavalink.server.Launcher                 : Starting Launcher on BT-21051495 with PID 16508 (C:\Users\KIIT\Desktop\Techie_Final\Lavalink.jar started by KIIT in C:\Users\KIIT\Desktop\Techie_Final)
+2021-12-13 19:58:23.011  INFO 16508 --- [main] lavalink.server.Launcher                 : No active profile set, falling back to default profiles: default
+2021-12-13 19:58:23.142  WARN 16508 --- [background-preinit] o.s.h.c.j.Jackson2ObjectMapperBuilder    : For Jackson Kotlin classes support please add "com.fasterxml.jackson.module:jackson-module-kotlin" to the classpath
+2021-12-13 19:58:24.568  WARN 16508 --- [main] io.undertow.websockets.jsr               : UT026010: Buffer pool was not set on WebSocketDeploymentInfo, the default pool will be used
+2021-12-13 19:58:24.593  INFO 16508 --- [main] io.undertow.servlet                      : Initializing Spring embedded WebApplicationContext
+2021-12-13 19:58:24.595  INFO 16508 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1519 ms
+2021-12-13 19:58:24.964  WARN 16508 --- [main] l.server.config.SentryConfiguration      : Turning off sentry
+2021-12-13 19:58:25.286  INFO 16508 --- [main] c.s.d.l.tools.GarbageCollectionMonitor   : GC monitoring enabled, reporting results every 2 minutes.
+2021-12-13 19:58:25.494  INFO 16508 --- [main] lavalink.server.config.KoeConfiguration  : OS: Windows 10, Arch: amd64
+2021-12-13 19:58:25.495  WARN 16508 --- [main] lavalink.server.config.KoeConfiguration  : This system and architecture appears to not support native audio sending! GC pauses may cause your bot to stutter during playback.
+2021-12-13 19:58:25.751  INFO 16508 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-12-13 19:58:26.187  INFO 16508 --- [main] org.xnio                                 : XNIO version 3.3.8.Final
+2021-12-13 19:58:26.208  INFO 16508 --- [main] org.xnio.nio                             : XNIO NIO Implementation Version 3.3.8.Final
+2021-12-13 19:58:26.285  INFO 16508 --- [main] o.s.b.w.e.u.UndertowServletWebServer     : Undertow started on port(s) 2333 (http) with context path ''
+2021-12-13 19:58:26.291  INFO 16508 --- [main] lavalink.server.Launcher                 : Started Launcher in 4.042 seconds (JVM running for 4.595)
+2021-12-13 19:58:26.295  INFO 16508 --- [main] lavalink.server.Launcher                 : You can safely ignore the big red warning about illegal reflection. See https://github.com/freyacodes/Lavalink/issues/295
+2021-12-13 19:59:18.117  INFO 16508 --- [XNIO-1 task-1] io.undertow.servlet                      : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-12-13 19:59:18.119  INFO 16508 --- [XNIO-1 task-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-12-13 19:59:18.127  INFO 16508 --- [XNIO-1 task-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 7 ms
+2021-12-13 19:59:18.159 ERROR 16508 --- [XNIO-1 task-1] l.server.io.HandshakeInterceptorImpl     : Authentication failed from /0:0:0:0:0:0:0:1:59802
+2021-12-13 19:59:20.784 ERROR 16508 --- [XNIO-1 task-2] l.server.io.HandshakeInterceptorImpl     : Authentication failed from /0:0:0:0:0:0:0:1:59802
+2021-12-13 19:59:21.102 ERROR 16508 --- [XNIO-1 task-3] l.server.io.HandshakeInterceptorImpl     : Authentication failed from /0:0:0:0:0:0:0:1:59802
+2021-12-13 19:59:21.718 ERROR 16508 --- [XNIO-1 task-4] l.server.io.HandshakeInterceptorImpl     : Authentication failed from /0:0:0:0:0:0:0:1:59802
+2021-12-13 19:59:22.053 ERROR 16508 --- [XNIO-1 task-5] l.server.io.HandshakeInterceptorImpl     : Authentication failed from /0:0:0:0:0:0:0:1:59802
+2021-12-13 19:59:22.328 ERROR 16508 --- [XNIO-1 task-6] l.server.io.HandshakeInterceptorImpl     : Authentication failed from /0:0:0:0:0:0:0:1:59802
+2021-12-13 19:59:22.808 ERROR 16508 --- [XNIO-1 task-7] l.server.io.HandshakeInterceptorImpl     : Authentication failed from /0:0:0:0:0:0:0:1:59802
+2021-12-13 20:24:11.181  INFO 16508 --- [XNIO-1 task-8] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /127.0.0.1:64133
+2021-12-13 20:24:11.249  INFO 16508 --- [XNIO-1 task-8] lavalink.server.io.SocketServer          : Connection successfully established from erela.js
+2021-12-13 20:24:42.433  INFO 16508 --- [XNIO-1 I/O-9] lavalink.server.io.SocketServer          : {"op":"volume","guildId":"701041158876299373","volume":50}
+2021-12-13 20:24:42.460  INFO 16508 --- [XNIO-1 task-9] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "https://youtu.be/0sYmPDc4XzA"
+2021-12-13 20:24:43.705  INFO 16508 --- [XNIO-1 I/O-9] lavalink.server.io.SocketServer          : {"sessionId":"7ebbb0a398b427504e5a3f3fc68b83ca","op":"voiceUpdate","guildId":"701041158876299373","event":{"token":"99805955ee093c9d","guild_id":"701041158876299373","endpoint":"india2399.discord.media:443"}}
+2021-12-13 20:24:44.154  INFO 16508 --- [lava-daemon-pool-info-loader-2-thread-1] lavalink.server.player.AudioLoader       : Loaded track techiehi
+2021-12-13 20:24:44.175  INFO 16508 --- [XNIO-1 I/O-9] lavalink.server.io.SocketServer          : {"op":"play","guildId":"701041158876299373","track":"QAAAawIACHRlY2hpZWhpAAlQcml5YW5zaHUAAAAAAAAPoAALMHNZbVBEYzRYekEAAQAraHR0cHM6Ly93d3cueW91dHViZS5jb20vd2F0Y2g/dj0wc1ltUERjNFh6QQAHeW91dHViZQAAAAAAAAAA"}
+2021-12-13 20:24:45.807  INFO 16508 --- [lava-daemon-pool-playback-1-thread-1] c.s.l.c.natives.NativeLibraryLoader      : Native library libmpg123-0: loading with filter com.sedmelluq.discord.lavaplayer.natives.ConnectorNativeLibLoader$$Lambda$609/0x0000015c1f934c40@f500f7b
+2021-12-13 20:24:45.822  INFO 16508 --- [lava-daemon-pool-playback-1-thread-1] c.s.l.c.natives.NativeLibraryLoader      : Native library libmpg123-0: successfully loaded.
+2021-12-13 20:24:45.824  INFO 16508 --- [lava-daemon-pool-playback-1-thread-1] c.s.l.c.natives.NativeLibraryLoader      : Native library connector: loading with filter null
+2021-12-13 20:24:45.850  INFO 16508 --- [lava-daemon-pool-playback-1-thread-1] c.s.l.c.natives.NativeLibraryLoader      : Native library connector: successfully loaded.
+2021-12-13 20:25:02.428  INFO 16508 --- [XNIO-1 task-11] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "ytsearch:Alec Benjamin - If We Have Each Other"
+2021-12-13 20:25:03.319  INFO 16508 --- [lava-daemon-pool-info-loader-2-thread-1] lavalink.server.player.AudioLoader       : Loaded playlist Search results for: Alec Benjamin - If We Have Each Other
+2021-12-13 20:25:03.330  INFO 16508 --- [XNIO-1 I/O-9] lavalink.server.io.SocketServer          : {"op":"play","guildId":"701041158876299373","track":"QAAAowIAPEFsZWMgQmVuamFtaW4gLSBJZiBXZSBIYXZlIEVhY2ggT3RoZXIgW09mZmljaWFsIE11c2ljIFZpZGVvXQANQWxlYyBCZW5qYW1pbgAAAAAAAsbwAAt0c2NNU1hrX2phUQABACtodHRwczovL3d3dy55b3V0dWJlLmNvbS93YXRjaD92PXRzY01TWGtfamFRAAd5b3V0dWJlAAAAAAAAAAA="}
+2021-12-13 20:28:28.498  INFO 16508 --- [XNIO-1 task-13] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "ytsearch:whos laughing now"
+2021-12-13 20:28:29.264  INFO 16508 --- [lava-daemon-pool-info-loader-2-thread-1] lavalink.server.player.AudioLoader       : Loaded playlist Search results for: whos laughing now
+2021-12-13 20:28:29.278  INFO 16508 --- [XNIO-1 I/O-9] lavalink.server.io.SocketServer          : {"op":"play","guildId":"701041158876299373","track":"QAAAlAIAM0F2YSBNYXggLSBXaG8ncyBMYXVnaGluZyBOb3cgW09mZmljaWFsIE11c2ljIFZpZGVvXQAHQXZhIE1heAAAAAAAAwGIAAs4OVMtUmJzendKRQABACtodHRwczovL3d3dy55b3V0dWJlLmNvbS93YXRjaD92PTg5Uy1SYnN6d0pFAAd5b3V0dWJlAAAAAAAAAAA="}
+2021-12-13 20:31:58.773  INFO 16508 --- [XNIO-1 I/O-9] lavalink.server.io.SocketServer          : {"sessionId":"7ebbb0a398b427504e5a3f3fc68b83ca","op":"voiceUpdate","guildId":"701041158876299373","event":{"token":"99805955ee093c9d","guild_id":"701041158876299373","endpoint":"india2399.discord.media:443"}}
+2021-12-13 20:31:58.781  INFO 16508 --- [XNIO-1 I/O-9] lavalink.server.io.SocketServer          : {"op":"destroy","guildId":"701041158876299373"}
+2021-12-13 20:32:11.330  INFO 16508 --- [XNIO-1 I/O-9] lavalink.server.io.SocketServer          : {"op":"volume","guildId":"701041158876299373","volume":50}
+2021-12-13 20:32:11.337  INFO 16508 --- [XNIO-1 task-15] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "https://youtu.be/0sYmPDc4XzA"
+2021-12-13 20:32:11.560  INFO 16508 --- [lava-daemon-pool-info-loader-2-thread-1] lavalink.server.player.AudioLoader       : Loaded track techiehi
+2021-12-13 20:32:11.567  INFO 16508 --- [XNIO-1 I/O-9] lavalink.server.io.SocketServer          : {"op":"play","guildId":"701041158876299373","track":"QAAAawIACHRlY2hpZWhpAAlQcml5YW5zaHUAAAAAAAAPoAALMHNZbVBEYzRYekEAAQAraHR0cHM6Ly93d3cueW91dHViZS5jb20vd2F0Y2g/dj0wc1ltUERjNFh6QQAHeW91dHViZQAAAAAAAAAA"}
+2021-12-13 20:32:11.976  INFO 16508 --- [XNIO-1 I/O-9] lavalink.server.io.SocketServer          : {"sessionId":"7ebbb0a398b427504e5a3f3fc68b83ca","op":"voiceUpdate","guildId":"701041158876299373","event":{"token":"6023624adb11f96d","guild_id":"701041158876299373","endpoint":"india5126.discord.media:443"}}
+2021-12-13 20:32:20.819  INFO 16508 --- [XNIO-1 task-17] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "ytsearch:lalisa"
+2021-12-13 20:32:21.538  INFO 16508 --- [lava-daemon-pool-info-loader-2-thread-1] lavalink.server.player.AudioLoader       : Loaded playlist Search results for: lalisa
+2021-12-13 20:32:21.548  INFO 16508 --- [XNIO-1 I/O-9] lavalink.server.io.SocketServer          : {"op":"play","guildId":"701041158876299373","track":"QAAAdgIAE0xJU0EgLSAnTEFMSVNBJyBNL1YACUJMQUNLUElOSwAAAAAAAyiYAAthd2treUJIMnpFbwABACtodHRwczovL3d3dy55b3V0dWJlLmNvbS93YXRjaD92PWF3a2t5QkgyekVvAAd5b3V0dWJlAAAAAAAAAAA="}
+2021-12-13 20:36:03.490  INFO 16508 --- [XNIO-1 task-19] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "ytsearch:senorita"
+2021-12-13 20:36:04.192  INFO 16508 --- [lava-daemon-pool-info-loader-2-thread-1] lavalink.server.player.AudioLoader       : Loaded playlist Search results for: senorita
+2021-12-13 20:36:04.200  INFO 16508 --- [XNIO-1 I/O-9] lavalink.server.io.SocketServer          : {"op":"play","guildId":"701041158876299373","track":"QAAAjgIAKFNoYXduIE1lbmRlcywgQ2FtaWxhIENhYmVsbG8gLSBTZcOxb3JpdGEADFNoYXduIE1lbmRlcwAAAAAAAySwAAtQa2g4VXR1ZWpHdwABACtodHRwczovL3d3dy55b3V0dWJlLmNvbS93YXRjaD92PVBraDhVdHVlakd3AAd5b3V0dWJlAAAAAAAAAAA="}
+2021-12-13 20:39:51.800  INFO 16508 --- [XNIO-1 task-21] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "ytsearch:chaar kadam"
+2021-12-13 20:39:52.484  INFO 16508 --- [lava-daemon-pool-info-loader-2-thread-1] lavalink.server.player.AudioLoader       : Loaded playlist Search results for: chaar kadam
+2021-12-13 20:39:52.490  INFO 16508 --- [XNIO-1 I/O-9] lavalink.server.io.SocketServer          : {"op":"play","guildId":"701041158876299373","track":"QAAAtwIAVSdDaGFhciBLYWRhbScgRlVMTCBWSURFTyBTb25nIHwgUEsgfCBTdXNoYW50IFNpbmdoIFJhanB1dCB8IEFudXNoa2EgU2hhcm1hIHwgVC1zZXJpZXMACFQtU2VyaWVzAAAAAAADikAAC1dLYndvcFNYTFdVAAEAK2h0dHBzOi8vd3d3LnlvdXR1YmUuY29tL3dhdGNoP3Y9V0tid29wU1hMV1UAB3lvdXR1YmUAAAAAAAAAAA=="}
+2021-12-13 20:44:53.206  INFO 16508 --- [XNIO-1 task-23] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "ytsearch:symphony"
+2021-12-13 20:44:54.200  INFO 16508 --- [lava-daemon-pool-info-loader-2-thread-1] lavalink.server.player.AudioLoader       : Loaded playlist Search results for: symphony
+2021-12-13 20:44:54.208  INFO 16508 --- [XNIO-1 I/O-9] lavalink.server.io.SocketServer          : {"op":"play","guildId":"701041158876299373","track":"QAAAowIAPUNsZWFuIEJhbmRpdCAtIFN5bXBob255IChmZWF0LiBaYXJhIExhcnNzb24pIFtPZmZpY2lhbCBWaWRlb10ADENsZWFuIEJhbmRpdAAAAAAAA8DwAAthYXRyXzJNc3RySQABACtodHRwczovL3d3dy55b3V0dWJlLmNvbS93YXRjaD92PWFhdHJfMk1zdHJJAAd5b3V0dWJlAAAAAAAAAAA="}
+2021-12-13 20:50:28.954  INFO 16508 --- [XNIO-1 task-25] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "ytsearch:sia snowman"
+2021-12-13 20:50:29.962  INFO 16508 --- [lava-daemon-pool-info-loader-2-thread-1] lavalink.server.player.AudioLoader       : Loaded playlist Search results for: sia snowman
+2021-12-13 20:50:29.979  INFO 16508 --- [XNIO-1 I/O-9] lavalink.server.io.SocketServer          : {"op":"play","guildId":"701041158876299373","track":"QAAAewIAHlNpYSAtIFNub3dtYW4gW09mZmljaWFsIFZpZGVvXQADU2lhAAAAAAACo8gAC2dzZXQ3OUtNbXQwAAEAK2h0dHBzOi8vd3d3LnlvdXR1YmUuY29tL3dhdGNoP3Y9Z3NldDc5S01tdDAAB3lvdXR1YmUAAAAAAAAAAA=="}
+2021-12-13 20:53:37.680  INFO 16508 --- [XNIO-1 task-27] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "ytsearch:we made it through another day sia"
+2021-12-13 20:53:38.387  INFO 16508 --- [lava-daemon-pool-info-loader-2-thread-1] lavalink.server.player.AudioLoader       : Loaded playlist Search results for: we made it through another day sia
+2021-12-13 20:53:38.396  INFO 16508 --- [XNIO-1 I/O-9] lavalink.server.io.SocketServer          : {"op":"play","guildId":"701041158876299373","track":"QAAAlQIAOFNpYSBhbmQgRGF2aWQgR3VldHRhIC0gRmxvYXRpbmcgVGhyb3VnaCBTcGFjZSAoT2ZmaWNpYWwpAANTaWEAAAAAAAK3UAALN1hmd3U4TkgxaUkAAQAraHR0cHM6Ly93d3cueW91dHViZS5jb20vd2F0Y2g/dj03WGZ3dThOSDFpSQAHeW91dHViZQAAAAAAAAAA"}
+2021-12-13 20:57:05.204  INFO 16508 --- [XNIO-1 task-29] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "ytsearch:as if its your last"
+2021-12-13 20:57:06.043  INFO 16508 --- [lava-daemon-pool-info-loader-2-thread-1] lavalink.server.player.AudioLoader       : Loaded playlist Search results for: as if its your last
+2021-12-13 20:57:06.055  INFO 16508 --- [XNIO-1 I/O-9] lavalink.server.io.SocketServer          : {"op":"play","guildId":"701041158876299373","track":"QAAAmwIAOEJMQUNLUElOSyAtICfrp4jsp4Drp4nsspjrn7wgKEFTIElGIElUJ1MgWU9VUiBMQVNUKScgTS9WAAlCTEFDS1BJTksAAAAAAANPqAALQW1xLXFscWJqWUEAAQAraHR0cHM6Ly93d3cueW91dHViZS5jb20vd2F0Y2g/dj1BbXEtcWxxYmpZQQAHeW91dHViZQAAAAAAAAAA"}
+2021-12-13 21:01:20.884  INFO 16508 --- [XNIO-1 task-31] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "ytsearch:solo jennie"
+2021-12-13 21:01:21.815  INFO 16508 --- [lava-daemon-pool-info-loader-2-thread-1] lavalink.server.player.AudioLoader       : Loaded playlist Search results for: solo jennie
