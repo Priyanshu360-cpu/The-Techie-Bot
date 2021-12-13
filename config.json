@@ -23,7 +23,7 @@
       "identifier": "Techie",
       "retryAmount": 3,
       "retryDelay": 3000,
-      "secure": true 
+      "secure": false 
     
     }
   ]

@@ -87,15 +87,8 @@ client.logger = require("./utils/logger.js");
 client.emoji = require("./utils/emoji.json");
 client.selfRoles = [];
 client.data1 = 1;
-var nodes = [
-    {
-        host: "localhost",
-        password: "youshallnotpass",
-        port: 2333
-    }
-];
 client.manager = new Manager({
-    nodes: nodes,
+    nodes: client.config.nodes,
     send: function (id, payload) {
         var guild = client.guilds.cache.get(id);
         if (guild)

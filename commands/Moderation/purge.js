@@ -15,7 +15,7 @@ module.exports = {
 name: "purge",
 category: "Moderation",
 description: "Special Purge Group",
-args: false,
+args: true,
 usage: "",
 permission: [],
 owner: false,
