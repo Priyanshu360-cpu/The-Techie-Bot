@@ -37,6 +37,7 @@
     "cors": "^2.8.5",
     "delay": "^5.0.0",
     "discord-api-types": "^0.24.0",
+    "discord-rpc": "^4.0.1",
     "discord.js": "^13.3.1",
     "ejs": "^3.1.6",
     "erela.js": "^2.3.3",

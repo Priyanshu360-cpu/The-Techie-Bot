@@ -155,6 +155,18 @@ module.exports = async (client, player, track, payload, message, songt) => {
       }); 
     }
 }
-      
+
 }
+client.useractivity.setActivity({
+    details: `Listening to - ${track.title}`,
+    state: `Queue - ${player.queue.length}`,
+    largeImageKey: `${track.displayThumbnail("hqdefault")}`,
+    smallImageKey:"logo",
+    startTimestamp: new Date(),
+    largeImageText: "Techie Music",
+    partyId: "ae488379-351d-4a4f-ad32-2b9b01c91657",
+    buttons : [{label : "Listen Along" , url : "https://discord.gg/MuEvJ93k"}]
+}) 
+console.log("Switched rpc")
+
 }

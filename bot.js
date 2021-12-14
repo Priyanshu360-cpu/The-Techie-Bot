@@ -570,4 +570,20 @@ readdirSync("./interactions/").forEach(function (dir) {
         client.icommands.set(command.name, command);
     }
 });
+var rpc = require("discord-rpc");
+var fflient = new rpc.Client({ transport: 'ipc' });
+fflient.on("ready", function () {
+    fflient.setActivity({
+        details: "Empty Playlist",
+        state: "Idling Alone",
+        largeImageKey: "logo",
+        startTimestamp: new Date(),
+        largeImageText: "Techie Music",
+        partyId: "ae488379-351d-4a4f-ad32-2b9b01c91657",
+        buttons: [{ label: "Listen Along", url: "https://discord.gg/MuEvJ93k" }]
+    });
+    console.log("RPc active");
+});
+fflient.login({ clientId: "741280410180386947" })["catch"](console.error);
+client.useractivity = fflient;
 client.login('NzQxMjgwNDEwMTgwMzg2OTQ3.Xy1RLg.SPLJ3CptLS7Jx_1We745IsjhIlU');
