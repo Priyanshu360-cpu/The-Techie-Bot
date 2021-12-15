@@ -1,10 +1,4 @@
-const {
-    MessageEmbed,
-    Message,
-    Client
-} = require("discord.js");
-const Discord = require("discord.js");
-const { MessageActionRow,  MessageAttachment, MessageButton,  MessageSelectMenu } = require('discord.js');
+
 module.exports = {
     name: "selectroles",
     category: "Moderation",
@@ -13,7 +7,14 @@ module.exports = {
     usage: "",
     permission: [],
     owner: false,
-    execute: async (message, args, client, prefix) => {
+    execute: async (message, args, client, prefix) => { 
+        const {
+            MessageEmbed,
+            Message,
+            Client
+        } = require("discord.js");
+        const Discord = require("discord.js");
+        const { MessageActionRow,  MessageAttachment, MessageButton,  MessageSelectMenu } = require('discord.js');
         var a = await message.channel.send({content:"Self Roles#1"})
         let filter = m => message.author.id === m.author.id
         message.channel.send("Enter the number of Self Roles You want")
@@ -35,7 +36,7 @@ module.exports = {
                 b[i] = message.content;
                 i=i+1;
             }) 
-           for(j=1;j<=25;j++){
+           for(let j=1;j<=25;j++){
                if(!client.selfRole.get(`${message.guild.id}_${j}`)){
                    d = j;
                    break;

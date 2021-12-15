@@ -3,6 +3,18 @@ const ms = require('ms');
 
 module.exports = async (client, player) => {
 	const { MessageEmbed, MessageSelectMenu }=require("discord.js");
+	client.useractivity.setActivity({
+		details: "Empty Playlist",
+        state: "Idling Alone",
+        largeImageKey: "logo",
+		smallImageKey: "idle",
+		smallImageText: "idle",
+        startTimestamp: new Date(),
+        largeImageText: "Techie Music",
+        partyId: "ae488379-351d-4a4f-ad32-2b9b01c91657",
+        buttons : [{label : "Listen Along" , url : "https://discord.gg/MuEvJ93k"}]
+	}) 
+	console.log("Switched rpc")
     var data = await client.db.get(`mchannel_${player.guild}`);
     var data2 = await client.db.get(`mmesage_${player.guild}`);
 	var data3 = await client.db.get(`mqmessage_${player.guild}`);
