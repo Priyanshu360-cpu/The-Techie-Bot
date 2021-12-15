@@ -8,7 +8,8 @@ module.exports = {
     args: false,
     usage: "",
     permission: [],
-	 execute: async (message, args, client, track, prefix) => {
+	 execute: async (message, args, client, track, prefix) => { 
+        client.db.set(`Delto_${message.guild.id}`, "10")
         const { minTransformDependencies } = require("mathjs");
         const { convertTime } = require('../../utils/convert.js');
         const { progressbar } = require('../../utils/progressbar.js')
@@ -120,7 +121,9 @@ module.exports = {
             client.db.set(`mchannel_${message.guild.id}`,client.mchannel.get(`mchannel_${message.guild.id}`))
  
         channel.send({embeds:[queue]}).then(c=>client.db.set(`mqmessage_${message.guild.id}`,c.id))})
+     setTimeout (() => client.db.set(`Delto_${message.guild.id}`, "2"), 8000)
+
                 }
          }
-     }
+     } 
     }

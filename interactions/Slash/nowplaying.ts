@@ -10,7 +10,7 @@ module.exports = {
       const { progressbar } = require('../../utils/progressbar.js')
         const { channel } = interaction.member.voice;
         var player = interaction.client.manager.get(interaction.guild.id);
-        if (!player.queue.current) {
+        if (!player.queue) {
             let thing = new MessageEmbed()
                 .setColor("RED")
                 .setDescription("There is no music playing.");

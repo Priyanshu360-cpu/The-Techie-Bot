@@ -66,6 +66,7 @@ module.exports = client;
 client.commands = new discord_js_1.Collection();
 client.icommands = new discord_js_1.Collection();
 client.tversion = "1.0.0";
+client.deletems = new discord_js_1.Collection();
 client.updates = "Final Version Very Soon";
 client.apppy = appy;
 client.mchannel = new discord_js_1.Collection();
@@ -578,6 +579,8 @@ fflient.on("ready", function () {
         state: "Idling Alone",
         largeImageKey: "logo",
         startTimestamp: new Date(),
+        smallImageKey: "idle",
+        smallImageText: "idle",
         largeImageText: "Techie Music",
         partyId: "ae488379-351d-4a4f-ad32-2b9b01c91657",
         buttons: [{ label: "Listen Along", url: "https://discord.gg/MuEvJ93k" }]
