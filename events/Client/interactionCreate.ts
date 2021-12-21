@@ -1,6 +1,9 @@
 
 module.exports = async(client, interaction) =>{
-    
+    const {MessageEmbed}=require("discord.js");
+    /**
+     * @param {MessageEmbed} MessageEmbed
+     */
     const commandName = interaction.commandName;
     const command = client.icommands.get(commandName);
     if (!command) return;

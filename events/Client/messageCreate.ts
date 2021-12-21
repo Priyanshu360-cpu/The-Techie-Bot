@@ -3,7 +3,7 @@
 module.exports = async (client, message) => {
     const { MessageEmbed, MessageSelectMenu } = require("discord.js");
     var data = await client.db.get(`mchannel_${message.guild.id}`);
-   if(message.channel.id === data&&client.db.get(`Delto_${message.guild.id}`) ==="2")setTimeout(()=>message.delete(),3000)
+   if(message.channel.id === data&&await client.db.get(`Delto_${message.guild.id}`) ==="2")setTimeout(()=>message.delete(),3000)
    if (message.author.bot) return;
    if (!message.guild) return;
 
