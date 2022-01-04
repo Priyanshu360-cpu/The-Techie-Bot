@@ -17,10 +17,7 @@ module.exports = async (client, message) => {
         function editmsg(){
             let a = Math.floor(client.uptime/(60100060*24))
             let h = new Date(client.uptime)
-            let mcount = 0; 
-            client.guilds.cache.forEach((guild) => {
-                mcount += guild.memberCount 
-            })
+            let mcount = client.guilds.cache.reduce((a,g) => a+(g.memberCount??0), 0)
             let c = a?a+"d "+h.getHours()+"h "+h.getMinutes()+"m "+h.getSeconds()+"s ":h.getHours()?h.getHours()+"h "+h.getMinutes()+"m "+h.getSeconds()+"s ":h.getMinutes()?h.getMinutes()+"m "+h.getSeconds()+"s":h.getSeconds()+"s";
             const embed = new MessageEmbed()
             embed.setTitle("Status")

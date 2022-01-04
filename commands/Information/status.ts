@@ -20,11 +20,7 @@ const moment = require("moment");
         const about = message.client.emoji.about;
         let ccount = client.channels.cache.size;
         let scount = client.guilds.cache.size;
-        let mcount = 0; 
-client.guilds.cache.forEach((guild) => {
-    mcount += guild.memberCount 
-
-})
+        let mcount = client.guilds.cache.reduce((a,g) => a+(g.memberCount??0), 0)
         const embed = new MessageEmbed()
             .setColor(message.client.embedColor)
             .setThumbnail(message.client.user.displayAvatarURL())
